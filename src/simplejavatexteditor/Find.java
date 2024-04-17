@@ -35,7 +35,7 @@ import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Find extends JFrame implements ActionListener {
+public class Find extends JFrame implements ActionListener,FindDialog {
 
     private static final long serialVersionUID = 1L;
     int startIndex=0;
@@ -176,6 +176,13 @@ public class Find extends JFrame implements ActionListener {
 
     public void replaceAll() {
         txt.setText(txt.getText().replaceAll(textF.getText() , textR.getText()));
+    }
+
+    @Override
+    public void showDialog() {
+        this.setVisible(true);
+
+
     }
 
     public void actionPerformed(ActionEvent e) {

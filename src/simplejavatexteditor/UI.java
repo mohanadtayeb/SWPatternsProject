@@ -187,7 +187,7 @@ public class UI extends JFrame implements ActionListener {
         this.setJMenuBar(menuBar);
 
         // Set Actions:
-        selectAllAction = new SelectAllAction("Select All", clearIcon, "Select all text", new Integer(KeyEvent.VK_A),
+        selectAllAction = new SelectAllAction("Select All", clearIcon, "Select all text", Integer.valueOf(KeyEvent.VK_A),
                 textArea);
 
         this.setJMenuBar(menuBar);
@@ -561,7 +561,10 @@ public class UI extends JFrame implements ActionListener {
         }
         // Find
         if (e.getSource() == quickFind || e.getSource() == quickButton) {
-            new Find(textArea);
+//           new Find(textArea);
+            FindDialogFactory findDialogFactory = new StandardFindDialogFactory();
+            FindDialog findDialog = findDialogFactory.createFindDialog(textArea);
+            findDialog.showDialog();
         } // About Me
         else if (e.getSource() == aboutMe || e.getSource() == aboutMeButton) {
             new About(this).me();
