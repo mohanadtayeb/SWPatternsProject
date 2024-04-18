@@ -98,7 +98,7 @@ public class UI extends JFrame implements ActionListener {
     private final ImageIcon aboutIcon = new ImageIcon(UI.class.getResource("icons/about.png"));
 
     private SupportedKeywords kw = new SupportedKeywords();
-    private HighlightText languageHighlighter = new HighlightText(Color.GRAY);
+    private HighlightText languageHighlighter = new HighlightBuilder().color(Color.BLUE).patterns(new String[]{"\\b(int|float|double|long|short|char|String|boolean|void)\\b"}).build();
     AutoComplete autocomplete;
     private boolean hasListener = false;
     private boolean edit = false;
