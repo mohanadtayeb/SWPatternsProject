@@ -79,7 +79,7 @@ public class About {
 
     public void software(String Aboutme, String contentString) {
         // frame.setTitle("About Me - " + SimpleJavaTextEditor.NAME);
-        frame.setTitle(String Aboutme);
+        frame.setTitle(Aboutme);
 
         /* contentText =
         "<html><body><p>" +

@@ -1,10 +1,11 @@
 package simplejavatexteditor;
 
-public class AboutAdapter{
+
+public class AboutAdapter implements AboutImpl{
     private About about;
 
     public AboutAdapter(UI ui){
-        this.about = new About(UI ui);
+        this.about = new About(ui);
     }
 
     @Override
