@@ -57,10 +57,11 @@ public class About {
         text = new JLabel();
     }
 
-    public void me() {
-        frame.setTitle("About Me - " + SimpleJavaTextEditor.NAME);
+    public void me(String Aboutme, String contentString) {
+        // frame.setTitle("About Me - " + SimpleJavaTextEditor.NAME);
+        frame.setTitle(Aboutme);
 
-        contentText =
+        /* contentText =
         "<html><body><p>" +
         "Author: Pierre-Henry Soria<br />" +
         "Contact me at: " +
@@ -68,21 +69,24 @@ public class About {
                 "<br /><br />" +
                 "Modified By: Achintha Gunasekara<br />" +
                 "Contact me at: <a href='mailto:" + SimpleJavaTextEditor.EDITOR_EMAIL + "?subject=About the NotePad PH Software'>" + SimpleJavaTextEditor.EDITOR_EMAIL + "</a>" +
-        "</p></body></html>";
+        "</p></body></html>"; */
+        contentText = contentString;
 
         text.setText(contentText);
         panel.add(text);
         frame.add(panel);
     }
 
-    public void software() {
-        frame.setTitle("About Me - " + SimpleJavaTextEditor.NAME);
+    public void software(String Aboutme, String contentString) {
+        // frame.setTitle("About Me - " + SimpleJavaTextEditor.NAME);
+        frame.setTitle(String Aboutme);
 
-        contentText =
+        /* contentText =
         "<html><body><p>" +
         "Name: " + SimpleJavaTextEditor.NAME + "<br />" +
         "Version: " + SimpleJavaTextEditor.VERSION +
-        "</p></body></html>";
+        "</p></body></html>";*/
+        contentText = contentString;
 
         text.setText(contentText);
         panel.add(text);

@@ -567,10 +567,12 @@ public class UI extends JFrame implements ActionListener {
             findDialog.showDialog();
         } // About Me
         else if (e.getSource() == aboutMe || e.getSource() == aboutMeButton) {
-            new About(this).me();
+            // new About(this).me();
+            new AboutAdapter(this).me();
         } // About Software
         else if (e.getSource() == aboutSoftware || e.getSource() == aboutButton) {
-            new About(this).software();
+            // new About(this).software();
+            new AboutAdapter(this).software();
         }
     }
 
