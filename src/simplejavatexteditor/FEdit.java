@@ -16,11 +16,17 @@
  * @modemail    contact@achinthagunasekara.com
  */
 
+
 package simplejavatexteditor;
 
 import javax.swing.JTextArea;
 
-public class FEdit {
+public class FEdit implements TextEditorOperation{
+
+    @Override
+    public void execute(JTextArea textArea) {
+        clear(textArea);
+    }
 
     public static void clear(JTextArea textArea) {
         textArea.setText("");
