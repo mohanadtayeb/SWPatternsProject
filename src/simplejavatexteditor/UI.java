@@ -97,11 +97,17 @@ public class UI extends JFrame implements ActionListener {
     private final ImageIcon aboutMeIcon = new ImageIcon(UI.class.getResource("icons/about_me.png"));
     private final ImageIcon aboutIcon = new ImageIcon(UI.class.getResource("icons/about.png"));
 
+
+    private Command clearCommand;
+
     private SupportedKeywords kw = new SupportedKeywords();
-    private HighlightText languageHighlighter = new HighlightBuilder().color(Color.BLUE).patterns(new String[]{"\\b(int|float|double|long|short|char|String|boolean|void)\\b"}).build();
+    private HighlightText languageHighlighter = new HighlightBuilder().color(Color.RED).patterns(new String[]{"\\b(int|float|double|long|short|char|String|boolean|void)\\b"}).build();
     AutoComplete autocomplete;
     private boolean hasListener = false;
     private boolean edit = false;
+
+
+
 
     public UI() {
         try {
@@ -110,7 +116,8 @@ public class UI extends JFrame implements ActionListener {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-
+        clearButton = new JButton("Clear");
+        clearButton.addActionListener(this);
         // Set the initial size of the window
         setSize(800, 500);
 
@@ -357,6 +364,10 @@ public class UI extends JFrame implements ActionListener {
         italicButton.addActionListener(this);
         mainToolbar.add(italicButton);
         mainToolbar.addSeparator();
+
+
+
+
         /**
          * **************** FONT SETTINGS SECTION **********************
          */
